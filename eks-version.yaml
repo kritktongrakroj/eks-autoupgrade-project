@@ -1,0 +1,22 @@
+# Pinned EKS version
+# This file sets the one Kubernetes version your cluster uses.
+# The auto-upgrade job reads it. Bump it to upgrade.
+
+cluster:
+  name: eks-autoupgrade-example
+  region: ap-southeast-1
+
+# The pin. Change this to upgrade.
+eks:
+  version: "1.30"
+
+# Node groups follow the same version.
+nodegroups:
+  - name: default
+    version: "1.30"
+
+# Add-ons pinned to versions that match 1.30.
+addons:
+  vpc-cni: "v1.18.3-eksbuild.2"
+  coredns: "v1.11.1-eksbuild.9"
+  kube-proxy: "v1.30.0-eksbuild.3"
