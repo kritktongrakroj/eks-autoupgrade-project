@@ -8,15 +8,15 @@ cluster:
 
 # The pin. Change this to upgrade.
 eks:
-  version: "1.31"
+  version: "1.32"
 
 # Node groups follow the same version.
 nodegroups:
   - name: default
-    version: "1.31"
+    version: "1.32"
 
-# Add-ons pinned to versions that match 1.31.
+# Add-ons pinned to versions that match 1.32.
 addons:
-  vpc-cni: "v1.18.5-eksbuild.1"
-  coredns: "v1.11.3-eksbuild.1"
-  kube-proxy: "v1.31.0-eksbuild.5"
+  vpc-cni: "v1.19.2-eksbuild.1"
+  coredns: "v1.11.4-eksbuild.1"
+  kube-proxy: "v1.32.0-eksbuild.2"
